@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.shopping-list {
+  list-style: none;
+  padding: 0;
+}
+
+.shopping-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.shopping-item h3 {
+  margin-top: 0;
+}
+
+.wider-column {
+  width: 60%;
+}
+
+.narrow-column {
+  width: 40%;
+}
