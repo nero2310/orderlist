@@ -9,7 +9,7 @@ function ShoppingItemList() {
     useEffect(() => {
         const fetchShoppingItems = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/api/items/`);
+                const response = await fetch(`https://shopinglistbackend.onrender.com/api/items/`);
                 const data = await response.json();
                 console.log(data);
                 setItems(data);

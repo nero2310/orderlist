@@ -14,7 +14,7 @@ function AddItemForm({ onAddItem, items }) {
             unit_price: parseFloat(unit_price),
         };
 
-        fetch('http://localhost:8000/api/items/', {
+        fetch('https://shopinglistbackend.onrender.com/api/items/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

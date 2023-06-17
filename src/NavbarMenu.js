@@ -10,7 +10,7 @@ function NavigationBar() {
     useEffect(() => {
         const fetchLanguages = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/languages/');
+                const response = await axios.get('https://shopinglistbackend.onrender.com/api/languages/');
                 setLanguages(response.data);
             } catch (error) {
                 console.log(error);

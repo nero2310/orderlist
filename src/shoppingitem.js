@@ -11,7 +11,7 @@ function ShoppingItemList() {
     useEffect(() => {
         const fetchShoppingItems = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/api/shopping-items/${pk}/`);
+                const response = await fetch(`https://shopinglistbackend.onrender.com/api/shopping-items/${pk}/`);
                 const data = await response.json();
                 setItems(data);
             } catch (error) {
@@ -21,7 +21,7 @@ function ShoppingItemList() {
 
         const fetchItems = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/items/');
+                const response = await fetch('https://shopinglistbackend.onrender.com/api/items/');
                 const data = await response.json();
                 setNewItem({ ...newItem, product: data[0]?.id }); // Set the default selected product
                 setSelectedItems(data);
@@ -46,7 +46,7 @@ function ShoppingItemList() {
             unit_price: parseFloat(unit_price),
         };
 
-        fetch(`http://localhost:8000/api/shopping-items/${pk}/`, {
+        fetch(`https://shopinglistbackend.onrender.com/api/shopping-items/${pk}/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

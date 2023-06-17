@@ -13,7 +13,7 @@ function OrderList() {
 
     const fetchOrders = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/shoppings/');
+            const response = await axios.get('https://shopinglistbackend.onrender.com/api/shoppings/');
             setOrders(response.data);
         } catch (error) {
             console.log(error);
@@ -23,7 +23,7 @@ function OrderList() {
     const createShoppingList = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8000/api/shoppings/', { name: newListName });
+            const response = await axios.post('https://shopinglistbackend.onrender.com/api/shoppings/', { name: newListName });
             const newList = response.data;
             setOrders([...orders, newList]);
             setNewListName('');
@@ -34,7 +34,7 @@ function OrderList() {
 
     const deleteShoppingList = async (orderId) => {
         try {
-            await axios.delete(`http://localhost:8000/api/shoppings/${orderId}`);
+            await axios.delete(`https://shopinglistbackend.onrender.com/api/shoppings/${orderId}`);
             const updatedOrders = orders.filter((order) => order.id !== orderId);
             setOrders(updatedOrders);
         } catch (error) {
